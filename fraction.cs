@@ -36,11 +36,10 @@ namespace ConsoleApp1
         {
             return new fraction (a.nominative * b.nominative, a.numerator * b.nominative + a.nominative * b.numerator);
         }
-        public static fraction operator - (fraction a, fraction b)
+        public static fraction operator - (fraction a)
         {
-            return new fraction (a.nominative * b.nominative, a.numerator * b.nominative + a.nominative * b.numerator);
+            return new fraction (-a.numerator ,a.nominative);
         }
-
 
         public static fraction operator * (fraction a, fraction b)
         {
